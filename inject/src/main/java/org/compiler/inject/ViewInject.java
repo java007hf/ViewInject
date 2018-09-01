@@ -1,6 +1,8 @@
 package org.compiler.inject;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
+import android.os.Build;
 import android.support.v4.util.ArrayMap;
 import android.view.View;
 
@@ -11,6 +13,7 @@ import org.compiler.inject.provider.ViewProvider;
 /**
  * Created by JokAr on 16/8/6.
  */
+@TargetApi(Build.VERSION_CODES.KITKAT)
 public class ViewInject {
     private static final ActivityProvider activityProvider = new ActivityProvider();
 

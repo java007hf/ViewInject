@@ -2,6 +2,7 @@ package org.compiler.viewinject;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.Button;
@@ -28,11 +29,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ViewInject.inject(this);
-
     }
 
-    @OnClick(R.id.textView)
+    @OnClick(R.id.button1)
     public void click() {
+        Log.d("MainActivity", "===click===");
         Toast.makeText(getApplicationContext(), "hello", Toast.LENGTH_SHORT).show();
     }
 
